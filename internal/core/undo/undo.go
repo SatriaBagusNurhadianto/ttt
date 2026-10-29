@@ -16,11 +16,11 @@ type EditCommand interface {
 // UndoStack manages undo and redo stacks with automatic grouping of
 // consecutive character inserts and deletes.
 type UndoStack struct {
-	undo           []EditCommand
-	redo           []EditCommand
-	grouping       bool
-	savePoint      int
-	inTransaction     bool
+	undo             []EditCommand
+	redo             []EditCommand
+	grouping         bool
+	savePoint        int
+	inTransaction    bool
 	transactionDepth int
 	transactionIdx   int
 	// DeleteCursorStart controls where the cursor lands after undoing a
